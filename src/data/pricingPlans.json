@@ -1,0 +1,48 @@
+[
+  {
+    "name": "Basic Plan",
+    "price": "Free",
+    "description": "Ideal for individuals just getting started.",
+    "features": [
+      "Access to basic features",
+      "Up to 5 projects",
+      "Community support"
+    ]
+  },
+  {
+    "name": "Pro Plan",
+    "price": "$9.99/month",
+    "description": "Perfect for professionals who need more features.",
+    "features": [
+      "Access to all features",
+      "Unlimited projects",
+      "Priority support",
+      "Advanced analytics"
+    ]
+  },
+  {
+    "name": "Business Plan",
+    "price": "$29.99/month",
+    "description": "Best for small to medium-sized businesses.",
+    "features": [
+      "Access to all features",
+      "Unlimited projects",
+      "Priority support",
+      "Advanced analytics",
+      "Team collaboration tools",
+      "Custom integrations"
+    ]
+  },
+  {
+    "name": "Enterprise Plan",
+    "price": "Contact us",
+    "description": "Customized solutions for large enterprises.",
+    "features": [
+      "All Business Plan features",
+      "Dedicated account manager",
+      "Custom onboarding",
+      "24/7 support",
+      "Custom security features"
+    ]
+  }
+]
