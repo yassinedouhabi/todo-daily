@@ -31,7 +31,7 @@ const Menu = ({ isVisible }) => {
           </Link>
         </li>
         <li>
-          <Link to="/" className="flex items-center gap-4">
+          <Link to="/register" className="flex items-center gap-4">
             <RiLoginCircleFill />
             Sign up
           </Link>
