@@ -1,14 +1,11 @@
-import { useForm } from "react-hook-form";
-import Button from "../components/Button";
-import { Toaster, toast } from "sonner";
-import { useNavigate } from "react-router-dom";
-import fieldsData from "../data/fieldsData";
 import PropTypes from "prop-types";
-import { FaCheckCircle } from "react-icons/fa";
-import { FaExclamationCircle } from "react-icons/fa";
-import axios from "axios";
+import Button from "../components/Button";
+import fieldsData from "../data/fieldsData";
+import { useForm } from "react-hook-form";
+import { Toaster, toast } from "sonner";
+import { FaCheckCircle, FaExclamationCircle } from "react-icons/fa";
 
-const Form = ({ fields, btnText, isLogin }) => {
+const Form = ({ fields, btnText }) => {
   const {
     register,
     handleSubmit,
@@ -19,30 +16,9 @@ const Form = ({ fields, btnText, isLogin }) => {
     mode: "onChange",
   });
 
-  const navigate = useNavigate();
-
-  // const onSubmit = (data) => {
-  //   toast.success("Form submitted successfully!");
-  //   console.log(data);
-  // };
-  const onSubmit = async (data) => {
-    try {
-      if (isLogin) {
-        const response = await axios.post(
-          "http://localhost:5000/api/login",
-          data
-        );
-        toast.success("Login successful!");
-        localStorage.setItem("token", response.data.token);
-        history.push("/app"); // Redirect to the app page
-      } else {
-        await axios.post("http://localhost:5000/api/register", data);
-        toast.success("Signup successful!");
-        history.push("/app"); // Redirect to the app page
-      }
-    } catch (error) {
-      toast.error(error.response.data.message || "Something went wrong");
-    }
+  const onSubmit = (data) => {
+    toast.success("Form submitted successfully!");
+    console.log(data);
   };
 
   const onError = (errors) => {
